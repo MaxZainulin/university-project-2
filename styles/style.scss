@@ -1,0 +1,287 @@
+@import url(./normolize.css);
+
+$baseFF: "Poppins", sans-serif;
+$sm: "max-width:760px";
+$xs: "max-width: 560px";
+$green: #779341;
+
+body {
+	font-family: "Poppins", sans-serif;
+	font: 400 16px/24px $baseFF;
+}
+
+.main {
+	// position: relative;
+	// max-width: 1440px;
+	// margin: 0 auto;
+	&__bg {
+		position: relative;
+		max-width: 1440px;
+		margin: 0 auto;
+		&-img {
+			margin: 0 auto;
+			height: 900px;
+			max-width: 1440px;
+			width: 100%;
+			object-position: left;
+			object-fit: cover;
+			display: block;
+		}
+	}
+
+	&__logo {
+		top: 31px;
+		left: 42px;
+		position: absolute;
+		font: 600 20px/30px $baseFF;
+		@media ($sm) {
+			top: 18px;
+			left: 26px;
+			font: 600 18px/27px $baseFF;
+		}
+	}
+
+	&__container {
+		max-width: 1440px;
+		margin: 0 auto;
+		&--sm {
+			padding: 80px 118px 0;
+			display: flex;
+			justify-content: flex-end;
+			position: absolute;
+			width: 100%;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	&__auth {
+		position: absolute;
+		top: 80px;
+		right: 118px;
+		max-width: 539px;
+		width: 100%;
+		background: rgba(255, 255, 255, 0.75);
+		border-radius: 40px;
+		padding: 44px 44px 79px;
+		@media ($sm) {
+			max-width: 326px;
+			margin: 0 auto;
+			right: 23px;
+			left: 23px;
+			padding: 43px 27px 79px;
+		}
+	}
+}
+.auth {
+	&__head {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__subtitle {
+		font: 600 21px/31px $baseFF;
+		span {
+			text-transform: uppercase;
+			color: $green;
+		}
+		@media ($sm) {
+			font: 600 16px/24px $baseFF;
+		}
+	}
+
+	&__sign {
+		margin-top: 5px;
+		color: #8d8d8d;
+		font: 400 13px/22px $baseFF;
+		@media ($sm) {
+			margin-top: 0;
+		}
+		&--mode {
+			@media ($sm) {
+				max-width: 76px;
+			}
+		}
+	}
+
+	&__sign-link {
+		color: $green;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__title {
+		font: 500 55px/53px $baseFF;
+		margin-bottom: 56px;
+		@media ($sm) {
+			font: 400 40px/44px $baseFF;
+			margin-bottom: 72px;
+		}
+	}
+
+	&__soc-links {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 52px;
+		@media ($sm) {
+			margin-bottom: 49px;
+		}
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		padding: 15px;
+		border-radius: 9px;
+		background-color: #fff;
+		margin-right: 13px;
+		font: 400 16px/24px $baseFF;
+		transition: all 0.3s;
+		@media ($xs) {
+			padding: 15px 9px;
+			font: 400 12px/18px $baseFF;
+			margin-right: 6px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		&:hover {
+			transition: all 0.3s;
+			background-color: rgb(226, 226, 226);
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		img {
+			width: 26px;
+			height: 26px;
+			@media ($sm) {
+				width: 18px;
+				height: 18px;
+			}
+		}
+		&--google {
+			max-width: 234px;
+			width: 100%;
+			padding: 15px 32px;
+			background: #e9f1ff;
+			color: #4285f4;
+			@media ($sm) {
+				max-width: 180px;
+				padding: 18px 10px 18px 19px;
+			}
+			&:hover {
+				background: #d5dce9;
+			}
+			img {
+				margin-right: 21px;
+				@media ($sm) {
+					margin-right: 11px;
+				}
+			}
+		}
+	}
+
+	&__form {
+	}
+
+	&__row {
+		max-width: 451px;
+		margin-bottom: 38px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		@media ($sm) {
+			margin-bottom: 36px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		a {
+			display: flex;
+			justify-content: flex-end;
+			color: #4285f4;
+			font: 400 13px/19px $baseFF;
+			margin-top: 18px;
+			&:hover {
+				text-decoration: underline;
+			}
+			@media ($sm) {
+				font: 400 11px/16px $baseFF;
+				margin-top: 12px;
+				margin-right: 17px;
+			}
+		}
+		&-duble {
+			display: flex;
+			justify-content: space-between;
+			input {
+				@media ($sm) {
+					max-width: 130px;
+				}
+			}
+		}
+	}
+
+	&__label {
+		margin-bottom: 9px;
+		@media ($sm) {
+			font: 400 14px/21px $baseFF;
+			margin-bottom: 16px;
+		}
+	}
+
+	&__input {
+		border: 1px solid #adadad;
+		transition: all 0.3s;
+		border-radius: 9px;
+		background-color: #fff;
+		height: 57px;
+		font: 300 14px/21px $baseFF;
+		padding: 0 25px;
+		width: 100%;
+		@media ($xs) {
+			font: 300 13px/19px $baseFF;
+			padding: 0 15px;
+		}
+		&:focus {
+			transition: all 0.3s;
+			border: 1px solid #4285f4;
+		}
+	}
+	&__button {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 44px;
+		@media ($sm) {
+			margin-top: 50px;
+		}
+
+		button {
+			cursor: pointer;
+			color: #fff;
+			font-weight: 500;
+			min-width: 236px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 10px;
+			height: 54px;
+			background-color: $green;
+			box-shadow: 0px 4px 19px rgba(119, 147, 65, 0.3);
+			border-radius: 10px;
+			border: none;
+			transition: all 0.3s;
+			&:hover {
+				transition: all 0.3s;
+				background: #627835;
+			}
+			@media ($sm) {
+				font: 500 16px/24px $baseFF;
+				min-width: 146px;
+			}
+		}
+	}
+}
